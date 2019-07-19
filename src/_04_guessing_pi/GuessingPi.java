@@ -7,6 +7,23 @@ package _04_guessing_pi;
 import javax.swing.JOptionPane;
 
 public class GuessingPi {
+	public static void main(String[] args) {
+		String pi="3.14159";
+		
+		for(int x=0;x<7;x++) {
+			
+			String answer=JOptionPane.showInputDialog("Print out the next integer of pi");
+			System.out.println( (pi.charAt(x)+""));
+			System.out.println(answer);
+			if(answer.equals( (pi.charAt(x)+""))) {
+			JOptionPane.showMessageDialog(null, "Correct");	
+			}
+			else {
+				JOptionPane.showMessageDialog(null, "Incorrect");
+				break;
+			}
+		}
+	}
 	// 1. Make a main method and make sure your program can run
 
 		// 2. Make a String variable to hold the value of Pi.
